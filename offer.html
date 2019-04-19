@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="offer-style.css">
+    <title>Выбор</title>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="top">
+            <p class="main-text">Увы, сложно объяснить, что такое.. Кибербезопасность. Ты должен увидеть это сам. Не поздно отказаться,
+                потом пути назад не будет. </p>
+        </div>
+        <div class="bottom">
+            <a href="http://camp.codabra.org/book/" target="_blank">
+                <img class="pill-img" src="images/red-pill.png">
+            </a>
+            <p class="description">Примешь красную таблетку, войдёшь в страну чудес. И ты узнаешь, глубока ли кроличья
+                нора.</p>
+        </div>
+        <div class="bottom">
+            <img class="pill-img" src="images/blue-pill.png" onclick="logout()">
+            <p class="description">Примешь синюю таблетку и сказке конец. Ты закроешь эту страницу и поверишь, что это
+                был сон.</p>
+        </div>
+    </div>
+    <script>
+        function logout(){
+            window.close()
+        }
+    </script>
+</body>
+
+</html>

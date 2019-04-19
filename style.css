@@ -1,0 +1,91 @@
+*{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url(images/matrix.gif);
+    height: 100vh;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.authentication{
+    color: rgb(0, 255, 0);
+    border: 2px rgb(0, 255, 0) solid;
+    padding: 2%;
+    width: 700px;
+}
+.welcome-text{
+    margin-top: 1%;
+}
+.ctf-text{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 45px;
+}
+.enter-data{
+    margin: 0 auto;
+    margin-top: 4%;
+    width: 60%;
+}
+input[type="text"], input[type="password"]{
+    margin: 1%;
+    padding: 15px 30px;
+    border: 1px rgb(0, 255, 0) solid;
+    background: inherit;
+    color: yellow;
+    text-align: left;
+    font-size: 24px;
+	outline: none;
+}
+input[type="text"]:focus, input[type="password"]:focus{
+    border: 1px yellow solid;
+}
+.input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.5s ease;}
+.input::-moz-placeholder                {opacity: 1; transition: opacity 0.5s ease;}
+.input:-moz-placeholder                 {opacity: 1; transition: opacity 0.5s ease;}
+.input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.5s ease;}
+.input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.5s ease;}
+.input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.5s ease;}
+.input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.5s ease;}
+.input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.5s ease;}
+
+.welcome-button{
+    padding: 15px 30px;
+    font-size: 24px;
+    background: inherit;
+    color: rgb(0, 255, 0);
+    border: 1px rgb(0, 255, 0) solid;
+    margin-top: 2%;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 1s color, 1s border;
+    cursor: pointer;
+    outline: none;
+}
+.welcome-button:hover{
+    color: yellow;
+    border: 1px yellow solid;
+}
+.link-creator{
+    color: rgb(0, 255, 0);
+    text-decoration: none;
+    transition: color 1s;
+}
+.link-creator:hover{
+    color: yellow;
+}
+.forgot-button{
+    margin: 0 auto;
+    margin-top: 1%;
+    width: 110px;
+    transition: 1s color;
+    cursor: pointer;
+}
+.forgot-button:hover{
+    color: yellow;
+}

@@ -22,14 +22,14 @@ function signin(){
 
 function forgot(){
     question = ['Любимый цвет?','Любимая машина?','Любимое место отдыха?','На какой улице живете?','В каком городе была ваша первая работа?'];
-    answer = ['голубой','лимузин','бали','аптекарский переулок','москва'];
+    answer = ['голубой','лимузин','бали','аптекарский переулок','новосибирск'];
     var rand = rand_question;
-    var secret = prompt(question[rand], '');
-    secret = secret.toLowerCase();
-	if (secret == answer[rand]){
+    var user_answer = prompt(question[rand], '');
+    user_answer = user_answer.toLowerCase();
+	if (user_answer == answer[rand]){
 		alert('Пароль от администратора: ' + key);
 	} 
-	else if (secret == null) {
+	else if (user_answer == null) {
 		alert( 'Вы не ввели ответ на вопрос' );
 	} 
 	else {

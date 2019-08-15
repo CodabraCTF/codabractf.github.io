@@ -89,3 +89,10 @@ input[type="text"]:focus, input[type="password"]:focus{
 .forgot-button:hover{
     color: yellow;
 }
+@font-face{
+    font-family: Orbitron-Light;
+    src: url(fonts/Orbitron-Light.ttf)
+}
+.second-level{
+    font-family: Orbitron-Light;
+}

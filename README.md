@@ -1,5 +1,4 @@
 # microCTF
-CTF for kids 10-14 years old! Two tasks, social engineering and fun!
 
 A small CTF competition for kids. Task based on simple social engineering of simple vk page. Warning! A lot of russian words :)
 

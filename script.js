@@ -10,7 +10,7 @@ function signin(){
     var password = document.getElementById("password").value;
     
 	if (login == 'admin' && password == key){
-		window.open('offer.html');
+		window.open('second.html');
 	} 
 	else if (login == '' || password == '') {
 		alert( 'Вы что-то забыли ввести' );

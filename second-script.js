@@ -48,11 +48,13 @@ function signin(){
 	}
 }
 
-document.addEventListener('keyup', function(event) {
-    if (event.code == 'Enter') {
-      signin();
-    }
-});
+var input_answer = document.querySelector("#answer");
+input_answer.addEventListener("keyup", handler);
+function handler() {
+  if(event.code == "Enter"){
+    signin();
+  };
+}
 
 function initStopwatch() {
     var thisTime = new Date(); 

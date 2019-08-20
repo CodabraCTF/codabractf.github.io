@@ -26,11 +26,21 @@ function signin(){
 	}
 }
 
-document.addEventListener('keyup', function(event) {
-  if (event.code == 'Enter') {
+var input_login = document.querySelector("#login");
+input_login.addEventListener("keyup", handler);
+function handler() {
+  if(event.code == "Enter"){
     signin();
-  }
-});
+  };
+}
+
+var input_password = document.querySelector("#password");
+input_password.addEventListener("keyup", handler);
+function handler() {
+  if(event.code == "Enter"){
+    signin();
+  };
+}
 
 function forgot(){
     question = ['Любимый цвет?','Любимая машина?','Любимое место отдыха?','На какой улице живете?','В каком городе была ваша первая работа?'];

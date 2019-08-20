@@ -1,1 +1,60 @@
-var _0x7184=["\x72\x61\x6E\x64\x6F\x6D","\x66\x6C\x6F\x6F\x72","\x76\x61\x6C\x75\x65","\x6C\x6F\x67\x69\x6E","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x70\x61\x73\x73\x77\x6F\x72\x64","\x61\x64\x6D\x69\x6E","\x73\x65\x63\x6F\x6E\x64\x2E\x68\x74\x6D\x6C","\x6F\x70\x65\x6E","","\u0412\u044B\x20\u0447\u0442\u043E\x2D\u0442\u043E\x20\u0437\u0430\u0431\u044B\u043B\u0438\x20\u0432\u0432\u0435\u0441\u0442\u0438","\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439\x20\u043B\u043E\u0433\u0438\u043D\x20\u0438\u043B\u0438\x20\u043F\u0430\u0440\u043E\u043B\u044C","\u041B\u044E\u0431\u0438\u043C\u044B\u0439\x20\u0446\u0432\u0435\u0442\x3F","\u041B\u044E\u0431\u0438\u043C\u0430\u044F\x20\u043C\u0430\u0448\u0438\u043D\u0430\x3F","\u041B\u044E\u0431\u0438\u043C\u043E\u0435\x20\u043C\u0435\u0441\u0442\u043E\x20\u043E\u0442\u0434\u044B\u0445\u0430\x3F","\u041D\u0430\x20\u043A\u0430\u043A\u043E\u0439\x20\u0443\u043B\u0438\u0446\u0435\x20\u0436\u0438\u0432\u0435\u0442\u0435\x3F","\u0412\x20\u043A\u0430\u043A\u043E\u043C\x20\u0433\u043E\u0440\u043E\u0434\u0435\x20\u0431\u044B\u043B\u0430\x20\u0432\u0430\u0448\u0430\x20\u043F\u0435\u0440\u0432\u0430\u044F\x20\u0440\u0430\u0431\u043E\u0442\u0430\x3F","\u0433\u043E\u043B\u0443\u0431\u043E\u0439","\u043B\u0438\u043C\u0443\u0437\u0438\u043D","\u0431\u0430\u043B\u0438","\u0430\u043F\u0442\u0435\u043A\u0430\u0440\u0441\u043A\u0438\u0439\x20\u043F\u0435\u0440\u0435\u0443\u043B\u043E\u043A","\u043D\u043E\u0432\u043E\u0441\u0438\u0431\u0438\u0440\u0441\u043A","\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65","\u041F\u0430\u0440\u043E\u043B\u044C\x20\u043E\u0442\x20\u0430\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440\u0430\x3A\x20","\u0412\u044B\x20\u043D\u0435\x20\u0432\u0432\u0435\u043B\u0438\x20\u043E\u0442\u0432\u0435\u0442\x20\u043D\u0430\x20\u0432\u043E\u043F\u0440\u043E\u0441","\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0439\x20\u043E\u0442\u0432\u0435\u0442"];var key=getRandomInt(1000,100000);var rand_question=getRandomInt(0,4);function getRandomInt(_0x4e0cx4,_0x4e0cx5){return Math[_0x7184[1]](Math[_0x7184[0]]()* (_0x4e0cx5- _0x4e0cx4+ 1))+ _0x4e0cx4}function signin(){var _0x4e0cx7=document[_0x7184[4]](_0x7184[3])[_0x7184[2]];var _0x4e0cx8=document[_0x7184[4]](_0x7184[5])[_0x7184[2]];if(_0x4e0cx7== _0x7184[6]&& _0x4e0cx8== key){window[_0x7184[8]](_0x7184[7])}else {if(_0x4e0cx7== _0x7184[9]|| _0x4e0cx8== _0x7184[9]){alert(_0x7184[10])}else {alert(_0x7184[11])}}}function forgot(){question= [_0x7184[12],_0x7184[13],_0x7184[14],_0x7184[15],_0x7184[16]];answer= [_0x7184[17],_0x7184[18],_0x7184[19],_0x7184[20],_0x7184[21]];var _0x4e0cxa=rand_question;var _0x4e0cxb=prompt(question[_0x4e0cxa],_0x7184[9]);_0x4e0cxb= _0x4e0cxb[_0x7184[22]]();if(_0x4e0cxb== answer[_0x4e0cxa]){alert(_0x7184[23]+ key)}else {if(_0x4e0cxb== null){alert(_0x7184[24])}else {alert(_0x7184[25])}}}
+var key = getRandomInt(1000,100000);
+var rand_question = getRandomInt(0,4);
+startdate = new Date();
+clockStart = startdate.getTime();
+seconds = 0;
+minutes = 0;
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function signin(){
+    var login = document.getElementById("login").value;
+    var password = document.getElementById("password").value;
+
+	if (login == 'admin' && password == key){
+        localStorage.setItem("secs", seconds);
+        localStorage.setItem("mins", minutes);
+        var frame = window.open('second.html');
+	} 
+	else if (login == '' || password == '') {
+		alert( 'Вы что-то забыли ввести' );
+	} 
+	else {
+		alert( 'Неверный логин или пароль' );
+	}
+}
+
+function forgot(){
+    question = ['Любимый цвет?','Любимая машина?','Любимое место отдыха?','На какой улице живете?','В каком городе была ваша первая работа?'];
+    answer = ['голубой','лимузин','бали','аптекарский переулок','новосибирск'];
+    var rand = rand_question;
+    var user_answer = prompt(question[rand], '');
+    user_answer = user_answer.toLowerCase();
+	if (user_answer == answer[rand]){
+		alert('Пароль от администратора: ' + key);
+	} 
+	else if (user_answer == null) {
+		alert( 'Вы не ввели ответ на вопрос' );
+	} 
+	else {
+		alert( 'Неправильный ответ' );
+	}
+}
+
+function initStopwatch() {
+  var thisTime = new Date(); 
+  return (thisTime.getTime() - clockStart)/1000; 
+}
+
+function getSecs() {
+  var tSecs = Math.round(initStopwatch());
+  var iSecs = tSecs % 60;
+  var iMins = Math.round((tSecs-30)/60);
+  var sSecs ="" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+  var sMins ="" + ((iMins > 9) ? iMins : "0" + iMins);
+  seconds = sSecs;
+  minutes = sMins;
+  setTimeout('getSecs()', 1000); 
+}

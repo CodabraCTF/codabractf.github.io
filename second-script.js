@@ -1,1 +1,65 @@
-var _0xe4bf=["\u041C\u0443\u0437\u044B\u043A\u0430\x20\u0436\u0438\u0437\u043D\u0438\x20\x3D\x20\x3F","\u041B\u044E\u0431\u0438\u043C\u044B\u0439\x20\u043F\u0435\u0432\u0435\u0446\x3F","\x34\x20\u0436\u0435\u043B\u0442\u044B\u0445\x20\u0442\u043E\u0432\u0430\u0440\u0438\u0449\u0430\x20\u0432\x20\u0437\u0435\u043B\u0435\u043D\u044B\u0445\x20\u043C\u0443\u043D\u0434\u0438\u0440\u0430\u0445\x3F","\u0411\u0435\u043B\u043E\u0435\x20\u043E\u0431\u043B\u0430\u043A\u043E\x20\u043D\u0430\x20\u043B\u0438\u0441\u0442\u043A\u0435\x3F","\u0447\u0435\u0440\u043D\u043E\u0435\x20\u0438\x20\u0431\u0435\u043B\u043E\u0435","\u0440\u0438\u043A\x20\u044D\u0441\u0442\u043B\u0438","\u043A\u0443\u043A\u0443\u0440\u0443\u0437\u0430","\u043A\u0430\u043C\u0435\u043B\u0438\u044F","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x71\x75\x65\x73\x74\x69\x6F\x6E","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x72\x61\x6E\x64\x6F\x6D","\x66\x6C\x6F\x6F\x72","\x76\x61\x6C\x75\x65","\x61\x6E\x73\x77\x65\x72","\x74\x6F\x4C\x6F\x77\x65\x72\x43\x61\x73\x65","\x6F\x66\x66\x65\x72\x2E\x68\x74\x6D\x6C","\x6F\x70\x65\x6E","\u0412\u044B\x20\u043D\u0435\x20\u0432\u0432\u0435\u043B\u0438\x20\u043E\u0442\u0432\u0435\u0442\x20\u043D\u0430\x20\u0432\u043E\u043F\u0440\u043E\u0441","\u041D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u044B\u0439\x20\u043E\u0442\u0432\u0435\u0442"];var rand_question=getRandomInt(0,3);arr_questions= [_0xe4bf[0],_0xe4bf[1],_0xe4bf[2],_0xe4bf[3]];arr_answers= [_0xe4bf[4],_0xe4bf[5],_0xe4bf[6],_0xe4bf[7]];document[_0xe4bf[10]](_0xe4bf[9])[_0xe4bf[8]]= arr_questions[rand_question];function getRandomInt(_0x5089x3,_0x5089x4){return Math[_0xe4bf[12]](Math[_0xe4bf[11]]()* (_0x5089x4- _0x5089x3+ 1))+ _0x5089x3}function signin(){user_answer= document[_0xe4bf[10]](_0xe4bf[14])[_0xe4bf[13]];user_answer= user_answer[_0xe4bf[15]]();if(user_answer== arr_answers[rand_question]){window[_0xe4bf[17]](_0xe4bf[16])}else {if(user_answer== null){alert(_0xe4bf[18])}else {alert(_0xe4bf[19])}}}
+var rand_question = getRandomInt(0,3);
+startdate = new Date();
+clockStart = startdate.getTime();
+seconds = 0;
+minutes = 0;
+
+arr_questions = [
+    'Музыка жизни = ?',
+    'Любимый певец?',
+    '4 желтых товарища в зеленых мундирах?',
+    'Белое облако на листке?'
+];
+
+arr_answers = [
+    'черное и белое',
+    'рик эстли',
+    'кукуруза',
+    'камелия'
+];
+
+document.getElementById('question').innerHTML = arr_questions[rand_question];
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function signin(){
+    user_answer = document.getElementById('answer').value;
+    user_answer = user_answer.toLowerCase();
+	if (user_answer == arr_answers[rand_question]){
+        temp_seconds = parseInt(seconds) + parseInt(localStorage.getItem("secs"));
+        temp_minutes = parseInt(minutes) + parseInt(localStorage.getItem("mins"));
+        
+        if(temp_seconds >= 60){
+            temp_seconds = temp_seconds % 60;
+            temp_minutes += 1;
+        }
+        
+        localStorage.setItem("secs", temp_seconds);
+        localStorage.setItem("mins", temp_minutes);
+        window.open('offer.html');
+	} 
+	else if (user_answer == null) {
+		alert( 'Вы не ввели ответ на вопрос' );
+	} 
+	else {
+		alert( 'Неправильный ответ' );
+	}
+}
+
+function initStopwatch() {
+    var thisTime = new Date(); 
+    return (thisTime.getTime() - clockStart)/1000; 
+}
+  
+function getSecs() {
+    var tSecs = Math.round(initStopwatch());
+    var iSecs = tSecs % 60;
+    var iMins = Math.round((tSecs-30)/60);
+    var sSecs ="" + ((iSecs > 9) ? iSecs : "0" + iSecs);
+    var sMins ="" + ((iMins > 9) ? iMins : "0" + iMins);
+    seconds = sSecs;
+    minutes = sMins;
+    setTimeout('getSecs()', 1000); 
+}

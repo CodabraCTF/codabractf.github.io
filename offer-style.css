@@ -42,5 +42,9 @@ body{
 }
 .congrats{
     font-size: 36px;
-    margin-bottom: 7%;
+    margin-bottom: 4%;
+}
+.timer{
+    font-size: 22px;
+    margin: 2%;
 }

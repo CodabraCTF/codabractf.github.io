@@ -48,6 +48,12 @@ function signin(){
 	}
 }
 
+document.addEventListener('keyup', function(event) {
+    if (event.code == 'Enter') {
+      signin();
+    }
+});
+
 function initStopwatch() {
     var thisTime = new Date(); 
     return (thisTime.getTime() - clockStart)/1000; 

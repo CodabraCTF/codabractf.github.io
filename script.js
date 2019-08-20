@@ -26,6 +26,12 @@ function signin(){
 	}
 }
 
+document.addEventListener('keyup', function(event) {
+  if (event.code == 'Enter') {
+    signin();
+  }
+});
+
 function forgot(){
     question = ['Любимый цвет?','Любимая машина?','Любимое место отдыха?','На какой улице живете?','В каком городе была ваша первая работа?'];
     answer = ['голубой','лимузин','бали','аптекарский переулок','новосибирск'];

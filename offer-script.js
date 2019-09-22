@@ -1,1 +1,32 @@
-var _0xcd3c=["\x73\x65\x63\x73","\x67\x65\x74\x49\x74\x65\x6D","\x6D\x69\x6E\x73","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x6E\x75\x6D\x2D\x73\x65\x63\x6F\x6E\x64\x73","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x6E\x75\x6D\x2D\x6D\x69\x6E\x75\x74\x65\x73","\x74\x65\x78\x74\x2D\x77\x6F\x72\x64","\u043F\u043E\u043D\u0430\u0434\u043E\u0431\u0438\u043B\u0430\u0441\u044C","\x74\x65\x78\x74\x2D\x6D\x69\x6E\x75\x74\x65\x73","\u043C\u0438\u043D\u0443\u0442\u0430","\u043F\u043E\u043D\u0430\u0434\u043E\u0431\u0438\u043B\u0438\u0441\u044C","\u043C\u0438\u043D\u0443\u0442\u044B","\u043F\u043E\u043D\u0430\u0434\u043E\u0431\u0438\u043B\u043E\u0441\u044C","\u043C\u0438\u043D\u0443\u0442","\x74\x65\x78\x74\x2D\x73\x65\x63\x6F\x6E\x64\x73","\u0441\u0435\u043A\u0443\u043D\u0434\u0430","\u0441\u0435\u043A\u0443\u043D\u0434\u044B","\u0441\u0435\u043A\u0443\u043D\u0434","\x63\x6C\x6F\x73\x65"];seconds= localStorage[_0xcd3c[1]](_0xcd3c[0]);minutes= localStorage[_0xcd3c[1]](_0xcd3c[2]);document[_0xcd3c[5]](_0xcd3c[4])[_0xcd3c[3]]= seconds;document[_0xcd3c[5]](_0xcd3c[6])[_0xcd3c[3]]= minutes;if(minutes% 10== 1){document[_0xcd3c[5]](_0xcd3c[7])[_0xcd3c[3]]= _0xcd3c[8];document[_0xcd3c[5]](_0xcd3c[9])[_0xcd3c[3]]= _0xcd3c[10]}else {if(minutes% 10>= 2&& minutes% 10<= 4){document[_0xcd3c[5]](_0xcd3c[7])[_0xcd3c[3]]= _0xcd3c[11];document[_0xcd3c[5]](_0xcd3c[9])[_0xcd3c[3]]= _0xcd3c[12]}else {document[_0xcd3c[5]](_0xcd3c[7])[_0xcd3c[3]]= _0xcd3c[13];document[_0xcd3c[5]](_0xcd3c[9])[_0xcd3c[3]]= _0xcd3c[14]}};if(seconds% 10== 1){document[_0xcd3c[5]](_0xcd3c[15])[_0xcd3c[3]]= _0xcd3c[16]}else {if(seconds% 10>= 2&& seconds% 10<= 4){document[_0xcd3c[5]](_0xcd3c[15])[_0xcd3c[3]]= _0xcd3c[17]}else {document[_0xcd3c[5]](_0xcd3c[15])[_0xcd3c[3]]= _0xcd3c[18]}};function logout(){window[_0xcd3c[19]]()}
+seconds = localStorage.getItem("secs");
+minutes = localStorage.getItem("mins");
+
+document.getElementById("num-seconds").innerHTML = seconds;
+document.getElementById("num-minutes").innerHTML = minutes;
+
+if(minutes % 10 == 1){
+    document.getElementById("text-word").innerHTML = "понадобилась";
+    document.getElementById("text-minutes").innerHTML = "минута";    
+}
+else if(minutes % 10 >= 2 && minutes % 10 <= 4){
+    document.getElementById("text-word").innerHTML = "понадобились";
+    document.getElementById("text-minutes").innerHTML = "минуты";
+}
+else{
+    document.getElementById("text-word").innerHTML = "понадобилось";
+    document.getElementById("text-minutes").innerHTML = "минут";
+}
+
+if(seconds % 10 == 1){
+    document.getElementById("text-seconds").innerHTML = "секунда";
+}
+else if(seconds % 10 >= 2 && seconds % 10 <= 4){
+    document.getElementById("text-seconds").innerHTML = "секунды";
+}
+else{
+    document.getElementById("text-seconds").innerHTML = "секунд";
+}
+
+function logout(){
+    window.close()
+}
